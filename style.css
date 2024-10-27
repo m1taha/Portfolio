@@ -1,0 +1,940 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.logo:hover{
+    color: orangered;
+    text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered;
+    transform: scale(1.1);
+}
+span{
+    color: orangered;
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-btn {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s ease;
+}
+.dropdown-content a:hover {
+    background-color: orangered;
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropdown-btn {
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+.contact{
+    padding: 10px 28px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.contact:hover{
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered;
+    color: white;
+}
+
+/* UAD */
+.UAD{
+    width: 100%;
+    min-height: 180vh;
+    background: rgb(241,241, 241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.UAD-content{
+    max-width: 800px;
+}
+.UAD-content h3{
+    font-size: 40px;
+}
+.UAD-content h1{
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 25px 0 30px;
+    text-decoration: underline;
+}
+.UAD-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.img_uad-box img{
+    position: relative;
+    top: -300px; /* Adjust the value to move it up */
+    width: 500px;
+}
+.img_WT-box img{
+    position: relative;
+    top: -300px; /* Adjust the value to move it up */
+    width: 500px;
+}
+.img_LM-box img{
+    position: relative;
+    top: -100px; /* Adjust the value to move it up */
+    width: 500px;
+}
+/* GPID */
+.GPID{
+    width: 100%;
+    min-height: 230vh;
+    background: rgb(241,241, 241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.GPID-content{
+    max-width: 800px;
+}
+.GPID-content h3{
+    font-size: 40px;
+}
+.GPID-content h1{
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 25px 0 30px;
+    text-decoration: underline;
+}
+.GPID-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between the images */
+}
+
+.image-container img {
+    width: 400px; /* Adjust the width of each image */
+}
+.img_gpid-box img {
+    width: 400px;
+    position: relative;
+    top: -500px; /* Adjust the value to move it up */
+}
+/* LabView */
+.LabVIEW{
+    width: 100%;
+    min-height: 340vh;
+    background: rgb(241,241, 241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.LabVIEW-content{
+    max-width: 800px;
+}
+.LabVIEW-content h3{
+    font-size: 40px;
+}
+.LabVIEW-content h1{
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 25px 0 30px;
+    text-decoration: underline;
+}
+.LabVIEW-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.img_labview-box img {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    top: -600px; /* Adjust the value to move it up */
+}
+/* plc */
+.plcAllen{
+    width: 100%;
+    min-height: 240vh;
+    background: rgb(241,241, 241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.plcAllen-content{
+    max-width: 800px;
+}
+.plcAllen-content h3{
+    font-size: 40px;
+}
+.plcAllen-content h1{
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 25px 0 30px;
+    text-decoration: underline;
+}
+.plcAllen-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between the images */
+}
+
+.image-container img {
+    width: 400px; /* Adjust the width of each image */
+}
+.img_plc-box img {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: -500px; /* Adjust the value to move it up */
+}
+/* home stuff */
+.home{
+    width: 100%;
+    min-height: 125vh;
+    background: rgb(241,241, 241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.home-content{
+    max-width: 800px;
+}
+.home-content h3{
+    font-size: 42px;
+}
+.home-content h1{
+    font-size: 62px;
+    line-height: 1.2;
+}
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+.btn-1{
+    padding: 15px 28px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.btn-2{
+    padding: 15px 28px;
+    background-color: orangered;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-2:hover{
+    background-color: white;
+    color: orangered;
+}
+.img-box img{
+    border-radius: 50%;
+    width: 550px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50px;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+    background: black;
+}
+.about-img img{
+    position: relative;
+    width: 550px;
+    box-shadow: 0 0 25px orangered,
+                0 0 50px orangered;
+    
+}
+.about-content h2{
+    text-align: left;
+    color: white;
+    font-size: 42px;
+}
+.about-content h3{
+    font-size: 62px;
+    color: white;
+}
+.about-content p{
+    color: white;
+    font-size: 20px;
+    margin: 2em 0 3em;
+}
+
+.contact-form h2{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size: 36px;
+}
+.contact-form form{
+    max-width: 50em;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3em;
+}
+.contact-form form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-form form .input-box input,
+.contact-form form textarea{
+    width: 100%;
+    padding: 1.5em;
+    font-size: 18px;
+    color: black;
+    background: rgb(241, 241, 241);
+    border-radius: .8rem;
+    margin: 1rem 0;
+    resize: none;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    transition: 0.3s ease;
+}
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    color: orangered;
+    border: 2px solid orangered;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid orangered;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    
+}
+/* Media Queries */
+
+/* Large tablets and small desktops */
+@media (max-width: 1025px) {
+    .header {
+        padding: 20px 5%;
+    }
+    .navbar a,
+    .dropdown-btn {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+    .UAD-content h3,
+    .GPID-content h3,
+    .LabVIEW-content h3,
+    .plcAllen-content h3,
+    .home-content h3,
+    .about-content h2,
+    .about-content h3 {
+        font-size: 32px;
+    }
+    .UAD-content h1,
+    .GPID-content h1,
+    .LabVIEW-content h1,
+    .plcAllen-content h1,
+    .home-content h1,
+    .about-content h2 {
+        font-size: 24px;
+    }
+    .UAD-content p,
+    .GPID-content p,
+    .LabVIEW-content p,
+    .plcAllen-content p,
+    .home-content p,
+    .about-content p,
+    .contact-form h2,
+    .contact-form form .input-box input,
+    .contact-form form textarea {
+        display: flex;
+        font-size: 18px;
+    }
+    .image-container img,
+    .img-box img{
+        max-width: 100px;
+    }
+    .img_uad-box img,
+    .img_WT-box img,
+    .img_LM-box img,
+    .img_gpid-box img{
+        max-width: 0px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img_labview-box img{
+        max-width: 250px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img_plc-box img,
+    .about-img img {
+        max-width: 250px;
+    }
+    /* Reducing padding and min-height for sections */
+    .UAD{
+        min-height: 100vh; 
+    }
+    .GPID{
+        min-height: 130vh; 
+    }
+    .LabVIEW{
+        min-height: 190vh; 
+    }
+    .plcAllen{
+        min-height: 135vh; 
+    }
+    .home,
+    .about,
+    .contact-form {
+        min-height: 80vh; /* Remove min-height to allow height to adapt */
+    }
+
+    /* Reducing margin within each section's content */
+    .UAD-content,
+    .GPID-content,
+    .LabVIEW-content,
+    .plcAllen-content,
+    .home-content,
+    .about-content {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: auto;
+    }
+}
+
+
+/* Tablets and small devices */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 5%;
+    }
+    .navbar a,
+    .dropdown-btn {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+    .contact{
+        padding: 10px 15px;
+        background-color: white;
+        color: black;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        display: block;
+        margin: 10px 0; /* Adds space between each contact item */
+    }
+    .UAD-content h3,
+    .GPID-content h3,
+    .LabVIEW-content h3,
+    .plcAllen-content h3,
+    .home-content h3,
+    .about-content h2,
+    .about-content h3 {
+        font-size: 32px;
+    }
+    .UAD-content h1,
+    .GPID-content h1,
+    .LabVIEW-content h1,
+    .plcAllen-content h1,
+    .home-content h1,
+    .about-content h2 {
+        font-size: 24px;
+    }
+    .UAD-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 20px;
+    }
+    .GPID-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 20px;
+    }
+    .LabVIEW-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 20px;
+    }
+    .plcAllen-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 20px;
+    }
+    .home-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 20px;
+    }
+    .about-content p,
+    .contact-form h2,
+    .contact-form form .input-box input,
+    .contact-form form textarea {
+        width: 100%; /* Ensures image fits the container width */
+      
+    }
+
+    /* pictures */
+    .image-container img{
+        max-width: 300px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img-box img{
+        max-width: 250px;
+    }
+    .img_uad-box img{
+        max-width: 0px;
+    }
+    .img_uad-results img{
+        max-width: 5px;
+    }
+    .img_WT-box img{
+        max-width: 0px;
+    }
+    .img_WT-results img{
+        max-width: 300px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img_LM-box img{
+        max-width: 0px;
+    }
+    .img_LM-results img{
+        max-width: 500px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img_gpid-box img{
+        max-width: 0px;
+    }
+    .img_gpid-capstone img{
+        max-width: 500px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    #robotVideo {
+        width: 100%; /* Full width of its container */
+        height: auto; /* Maintains aspect ratio */
+        max-width: 400px; /* Maximum width limit */
+    }
+    #gripperVideo{
+        width: 100%; /* Full width of its container */
+        height: auto; /* Maintains aspect ratio */
+        max-width: 500px; /* Maximum width limit */
+    }
+    .img_labview-box img{
+        max-width: 0px;
+    }
+    .img_plc-box img{
+        max-width: 0px;
+    }
+    .about-img img {
+        max-width: 250px;
+    }
+    /* Reducing padding and min-height for sections */
+    .UAD{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .GPID{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .LabVIEW{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .plcAllen{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .home{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .about{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .contact-form {
+        min-height: 80vh; /* Remove min-height to allow height to adapt */
+    }
+
+    /* Reducing margin within each section's content */
+    .UAD-content {
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .GPID-content{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .LabVIEW-content{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .plcAllen-content{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .home-content,
+    .about-content {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: auto;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 5%;
+    }
+    .navbar a,
+    .dropdown-btn {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+    .contact{
+        padding: 10px 15px;
+        background-color: white;
+        color: black;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        display: block;
+        margin: 10px 0; /* Adds space between each contact item */
+    }
+    .UAD-content h3,
+    .GPID-content h3,
+    .LabVIEW-content h3,
+    .plcAllen-content h3,
+    .home-content h3,
+    .about-content h2,
+    .about-content h3 {
+        font-size: 32px;
+    }
+    .UAD-content h1,
+    .GPID-content h1,
+    .LabVIEW-content h1,
+    .plcAllen-content h1,
+    .home-content h1,
+    .about-content h2 {
+        font-size: 24px;
+    }
+    .UAD-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 10px;
+    }
+    .GPID-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 10px;
+    }
+    .LabVIEW-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 10px;
+    }
+    .plcAllen-content p{
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+        font-size: 10px;
+    }
+    .home-content p,
+    .about-content p,
+    .contact-form h2,
+    .contact-form form .input-box input,
+    .contact-form form textarea {
+        width: 100%; /* Ensures image fits the container width */
+      
+    }
+
+    /* pictures */
+    .image-container img{
+        max-width: 170px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img-box img{
+        max-width: 500px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img_uad-box img{
+        max-width: 0px;
+    }
+    .img_uad-results img{
+        max-width: 5px;
+    }
+    .img_WT-box img{
+        max-width: 0px;
+    }
+    .img_WT-results img{
+        max-width: 300px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img_LM-box img{
+        max-width: 0px;
+    }
+    .img_LM-results img{
+        max-width: 300px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    .img_gpid-box img{
+        max-width: 0px;
+    }
+    .img_gpid-capstone img{
+        max-width: 300px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    #robotVideo {
+        width: 100%; /* Full width of its container */
+        height: auto; /* Maintains aspect ratio */
+        max-width: 200px; /* Maximum width limit */
+    }
+    #gripperVideo{
+        width: 100%; /* Full width of its container */
+        height: auto; /* Maintains aspect ratio */
+        max-width: 300px; /* Maximum width limit */
+    }
+    .img_labview-box img{
+        max-width: 0px;
+    }
+    .img_plc-box img{
+        max-width: 0px;
+    }
+    .about-img img {
+        max-width: 350px;
+        width: 100%; /* Ensures image fits the container width */
+        height: auto; /* Maintains image aspect ratio */
+        margin: 0 auto; /* Centers image in its flex container */
+    }
+    /* Reducing padding and min-height for sections */
+    .UAD{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .GPID{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .LabVIEW{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .plcAllen{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .home{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .about{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .contact-form {
+        min-height: 80vh; /* Remove min-height to allow height to adapt */
+    }
+
+    /* Reducing margin within each section's content */
+    .UAD-content {
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .GPID-content{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .LabVIEW-content{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .plcAllen-content{
+        margin-top: 100px;
+        margin-bottom: 10px;
+    }
+    .home-content,
+    .about-content {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: auto;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tire Lifter & Alignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Hassan's</span> Portfolio</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            
+             <!-- Dropdown for Projects -->
+             <div class="dropdown">
+                <a href="#" class="dropdown-btn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="UAD.html">Uniform Axial Deformation</a>
+                    <a href="WindTurbine.html">Wind Turbine Vibration Absorption</a>
+                    <a href="LeafMulcher.html">Ergonomic Leaf Mulcher</a>
+                    <a href="CranePID.html">Gantry Crane PID Control</a>
+                    <a href="Smart_Robot.html">Automated IR and Obstacle Avoidance Robot</a>
+                    <a href="Forced_Gripper.html">Forced Gripper</a>
+                    <a href="tireLifter.html">Tire Lifter & Alignment</a>
+                    <a href="AFCS.html">Automated Furniture Cleaning Station</a>
+                    <!-- Add more projects here -->
+                </div>
+            </div>
+        </nav>
+        
+
+        <a href="index.html#contact-form" class="contact">Contact Me</a>
+    </header>
+
+    <section class="plcAllen">
+        <div class="plcAllen-content">
+            <h3>Tire Lifter & Alignment</h3>
+
+            <h1>Background</h1>
+
+            <p>In the automotive industry, the efficiency and safety of tire maintenance operations are critical factors influencing workshop productivity. 
+            Traditional tire lifts, such as the Martins Industries Electric Tire Lift, require manual intervention for processes like aligning the lug holes, 
+            which can be labor-intensive and time-consuming. Recognizing this, the project aims to develop an innovative tire lift and alignment machine that 
+            automates the crucial steps of lifting and aligning car, SUV, and pickup tires. By integrating pneumatic technology and programmable logic control 
+            (PLC), the design offers a streamlined solution to reduce the physical effort involved in tire changes while improving speed and accuracy. The machine's
+            versatility across different wheel and tire sizes and its ability to accommodate varying bolt patterns ensures broad applicability within automotive workshops.</p>
+
+            <h1>Execution</h1>
+
+            <p>The design process commenced with an analysis of mechanical, pneumatic, electrical, and control system components. 
+            Fusion360 was employed to model the machine's structure, ensuring an optimized frame for stability and durability. 
+            Stress analysis was conducted in SolidWorks to verify the material selection could withstand operational loads. Pneumatic design, 
+            handled in FluidSim 6, focused on utilizing Festo DSNU pneumatic cylinders operating at 90 psi, providing reliable and consistent movement for tire lifting.
+            
+            </p>
+            
+            <p>For automation and control, the Allen-Bradley Micrologix 1400 PLC was selected to manage tire alignment and lifting operations. 
+            Safety features, such as emergency stop buttons and OSHA-compliant interlocks, were incorporated to ensure operator safety throughout the process. 
+            The ladder logic for PLC control was developed in PLCFiddle, and the Human Machine Interface (HMI) was designed to offer easy interaction for operators. 
+            Testing confirmed the system's ability to lift and align tires of various sizes with minimal manual effort, marking a successful execution of the tire lift 
+            and alignment machine's objectives.</p>
+ 
+            <h1>Results</h1>
+            <div class="image-container">
+                <img src="tireLift1.png" alt="">
+                <img src="tireLift2.png" alt="">
+            </div>
+                 
+        </div>
+        <div class="img_plc-box">
+            <img src="plcAllen.jpeg" alt="">
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/m1taha/"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="index.html#about">About Me</a>
+            </li>
+            <li>
+                <a href="index.html#contact-form">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright">© 2024 Hassan Taha| All Rights Reserved</p>
+    </footer> 
+</body>
+</html>

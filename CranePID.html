@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantry Crane PID Control</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Hassan's</span> Portfolio</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+           
+             <!-- Dropdown for Projects -->
+             <div class="dropdown">
+                <a href="#" class="dropdown-btn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="UAD.html">Uniform Axial Deformation</a>
+                    <a href="WindTurbine.html">Wind Turbine Vibration Absorption</a>
+                    <a href="LeafMulcher.html">Ergonomic Leaf Mulcher</a>
+                    <a href="CranePID.html">Gantry Crane PID Control</a>
+                    <a href="Smart_Robot.html">Automated IR and Obstacle Avoidance Robot</a>
+                    <a href="Forced_Gripper.html">Forced Gripper</a>
+                    <a href="tireLifter.html">Tire Lifter & Alignment</a>
+                    <a href="AFCS.html">Automated Furniture Cleaning Station</a>
+                    <!-- Add more projects here -->
+                </div>
+            </div>
+        </nav>
+        
+
+        <a href="index.html#contact-form" class="contact">Contact Me</a>
+    </header>
+
+    <section class="GPID">
+        <div class="GPID-content">
+            <h3>Gantry Crane PID Control</h3>
+
+            <h1>Background</h1>
+
+            <p>The gantry crane system, commonly employed in construction for transporting heavy loads, 
+            presents unique control challenges due to the dynamic behavior of its payload. As the crane 
+            moves along its horizontal track, the swinging motion of the load must be carefully controlled 
+            to avoid accidents and inefficiencies. Minimizing the swing angle and ensuring a smooth transfer 
+            in the shortest time possible is crucial for operational safety and efficiency. In control systems, 
+            closed-loop controllers are often preferred for such tasks due to their ability to correct system errors, 
+            reduce disturbances, and ensure stable performance. In this project, the focus is on modeling and simulating 
+            the gantry crane system using MATLAB and Simulink to design an effective control system that can manage the crane's 
+            motion efficiently.</p>
+
+            <h1>Execution</h1>
+
+            <p>The execution of this project involved designing and analyzing control strategies using two approaches: root-locus and frequency response techniques. 
+            In Simulink, the system's equations of motion were modeled, and various simulations were conducted to evaluate the system’s response. Using the root-locus method, 
+            the team iteratively adjusted the system's gain to meet steady-state error and transient response requirements. The frequency response approach, which is more direct, 
+            was also employed to fine-tune the controller. MATLAB's SISOTOOL facilitated the control system design, allowing for a systematic analysis of the system's stability 
+            and performance. By applying these techniques, the desired control objectives, such as minimizing overshoot and improving settling time, were achieved. </p>
+
+            <h1>Results</h1>
+            <div class="image-container">
+                <img src="step_gpid.png" alt="">
+                <img src="bode_gpid.png" alt="">
+            </div>            
+            <p>The step response shows that the system reacts quickly but has some oscillations, peaking at 0.0807 before settling down after 0.696 seconds. 
+            Although there is some overshoot, it indicates the system is responsive, which can be a good trait for performance.
+            
+            </p>
+
+            <p>The Bode diagram shows that the system amplifies signals around 1 rad/s, which might help it respond better to certain inputs. 
+            The phase shift suggests that as the frequency increases, the system's behavior changes, but overall, it remains stable.
+        
+            </p>
+                
+            <p>In conclusion, both responses indicate that the system performs well, with quick reactions and good stability, suggesting it is suitable for the project's needs.</p>
+            
+        </div>
+        <div class="img_gpid-box">
+            <img src="gantryCrane.png" alt="">
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/m1taha/"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="index.html#about">About Me</a>
+            </li>
+            <li>
+                <a href="index.html#contact-form">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright">© 2024 Hassan Taha| All Rights Reserved</p>
+    </footer> 
+</body>
+</html>

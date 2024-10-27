@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forced Gripper</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Hassan's</span> Portfolio</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            
+             <!-- Dropdown for Projects -->
+             <div class="dropdown">
+                <a href="#" class="dropdown-btn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="UAD.html">Uniform Axial Deformation</a>
+                    <a href="WindTurbine.html">Wind Turbine Vibration Absorption</a>
+                    <a href="LeafMulcher.html">Ergonomic Leaf Mulcher</a>
+                    <a href="CranePID.html">Gantry Crane PID Control</a>
+                    <a href="Smart_Robot.html">Automated IR and Obstacle Avoidance Robot</a>
+                    <a href="Forced_Gripper.html">Forced Gripper</a>
+                    <a href="tireLifter.html">Tire Lifter & Alignment</a>
+                    <a href="AFCS.html">Automated Furniture Cleaning Station</a>
+                    <!-- Add more projects here -->
+                </div>
+            </div>
+        </nav>
+        
+
+        <a href="index.html#contact-form" class="contact">Contact Me</a>
+    </header>
+
+    <section class="LabVIEW">
+        <div class="LabVIEW-content">
+            <h3>Forced Gripper using LabVIEW</h3>
+
+            <h1>Background</h1>
+
+            <p>The development of a force-controlled gripper system exemplifies the integration of advanced technologies for 
+            precise object manipulation. This project focused on creating a robotic hand capable of delicately handling lightweight objects, 
+            specifically a ping pong ball. Utilizing a Data Acquisition (DAQ) system, a strain gauge load cell, and a stepper motor, 
+            the project aimed to achieve accurate force measurements and controlled movements. The load cell served as the key sensor, 
+            converting mechanical force into electrical signals, allowing for the precise monitoring of grip strength. In parallel, a stepper 
+            motor was selected for its ability to provide fine control over the gripper's movements, ensuring gentle handling of delicate items. 
+            The system was controlled via LabVIEW, implementing a Proportional-Integral-Derivative (PID) closed-loop control algorithm to enhance 
+            responsiveness and accuracy. This approach highlights the seamless collaboration between hardware and software components, showcasing 
+            the potential of robotic systems in applications requiring meticulous handling of fragile objects.</p>
+
+            <h1>Execution</h1>
+
+            <p>The execution of this project involved a systematic approach to design, calibration, and implementation of the force-controlled gripper.
+
+            </p>
+            <p>1. Mechanical Design: The mechanical framework was crafted to effectively grip a ping pong ball. This design involved connecting a 
+                stepper motor to a gear system that controlled two arms. The load cell was strategically mounted to measure the force applied when 
+                the arms closed around the ball. The final assembly comprised a 3D-printed part for the gripper and wooden components for the base and arms, 
+                along with commonly available gears and screws.
+            
+            </p>
+            <p> 2. Electrical System & Data Acquisition: The electrical architecture incorporated essential components including the load cell, 
+                operational amplifiers (NE5532), and a USB DAQ system (NI 6001). The load cell operated by converting mechanical deflection into resistance changes, 
+                which were then amplified using the NE5532 to ensure accurate force readings. The DAQ system facilitated the conversion of analog signals from the 
+                load cell into digital formats for processing.
+            
+            </p>
+            <p> 3. Sensor Calibration and Data Logging: The calibration process was essential to ensure precise force measurements. 
+                A known weight was applied to the load cell to derive a conversion factor, and a Python function was utilized for signal filtering. 
+                LabVIEW was employed for data logging, capturing both raw and compensated force values for subsequent analysis.
+            
+            </p>
+            <p> 4. Control System Implementation: The PID control algorithm was implemented in LabVIEW, using the compensated force as the process variable. 
+                The output of the PID controller was converted into commands for the stepper motor, determining the direction and speed based on the control signals. 
+                This integration ensured that the gripper could delicately manipulate objects while adhering to predefined force limits.
+            
+            </p>    
+            <p> 5.Performance Assessment: Throughout the execution phase, performance was rigorously assessed. Detailed graphs were generated to evaluate the system's 
+                responsiveness and accuracy, with a focus on maintaining the delicate balance between grip strength and object integrity. The successful manipulation of 
+                the ping pong ball underscored the effectiveness of the combined hardware and software systems in achieving the project goals.
+            </p>
+
+            <h1>Results</h1>
+            <video id="gripperVideo" width="560" height="315" controls muted onvolumechange="this.muted = true;">
+                <source src="labView.mp4" type="video/mp4">
+            </video>
+        
+            <p>As demonstrated in the video, the force-controlled gripper successfully manipulated the ping pong ball by effectively utilizing the strain gauge load cell 
+            for precise force measurement and a stepper motor for controlled movement. The PID control algorithm implemented in LabVIEW ensured real-time adjustments to 
+            the motor commands, allowing the gripper to securely hold the ball without causing any damage. This successful demonstration highlights the system's capability 
+            to handle delicate objects with precision and care.</p>
+
+            
+        </div>
+        <div class="img_labview-box">
+            <img src="forcedGripper.png" alt="">
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/m1taha/"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="index.html#about">About Me</a>
+            </li>
+            <li>
+                <a href="index.html#contact-form">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright">© 2024 Hassan Taha| All Rights Reserved</p>
+    </footer> 
+</body>
+</html>

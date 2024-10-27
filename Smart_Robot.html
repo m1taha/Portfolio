@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated IR and Obstacle Avoidance Robot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Hassan's</span> Portfolio</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+          
+             <!-- Dropdown for Projects -->
+             <div class="dropdown">
+                <a href="#" class="dropdown-btn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="UAD.html">Uniform Axial Deformation</a>
+                    <a href="WindTurbine.html">Wind Turbine Vibration Absorption</a>
+                    <a href="LeafMulcher.html">Ergonomic Leaf Mulcher</a>
+                    <a href="CranePID.html">Gantry Crane PID Control</a>
+                    <a href="Smart_Robot.html">Automated IR and Obstacle Avoidance Robot</a>
+                    <a href="Forced_Gripper.html">Forced Gripper</a>
+                    <a href="tireLifter.html">Tire Lifter & Alignment</a>
+                    <a href="AFCS.html">Automated Furniture Cleaning Station</a>
+                    <!-- Add more projects here -->
+                </div>
+            </div>
+        </nav>
+        
+
+        <a href="index.html#contact-form" class="contact">Contact Me</a>
+    </header>
+
+    <section class="GPID">
+        <div class="GPID-content">
+            <h3>Automated Smart Robot Car</h3>
+
+            <h1>Background</h1>
+
+            <p>The project tasked the group with constructing a Smart Robot Car capable of completing two key tasks. 
+            Using the ELEGOO UNO R3 Smart Robot Car kit, the students demonstrated their knowledge of microprocessors 
+            and their ability to integrate hardware with software, all programmed in the Arduino IDE. The first task 
+            involved designing the car to follow a line autonomously, utilizing infrared (IR) sensors to detect a 
+            dark-colored tape on the ground, which acted as a guide. The second task required the car to navigate 
+            through a maze using ultrasonic sensors, which emitted pulses and calculated the time delay between sending
+            and receiving the signal to determine proximity to objects, enabling the car to turn and avoid obstacles. 
+            The project's overall objective was to test the students' mastery in integrating sensor-based systems, 
+            real-time data processing, and automated navigation.</p>
+
+            <h1>Execution</h1>
+
+            <p>The Smart Robot Car was assembled using the provided kit, and coding was done in the Arduino IDE. 
+            The line-following task required the car to move from Point A to Point B along a black tape, stopping 
+            for 3 seconds once it reached the endpoint. The IR sensors detected the line and guided the car's movement. 
+            The maze portion involved more complex navigation. Here, ultrasonic sensors were crucial, sending out pulses 
+            that bounced back from obstacles to calculate distances, helping the car avoid collisions as it made its way 
+            through the maze. After completing both tasks, the car was required to stop at the exit of the maze. 
+            Additional challenges included ensuring the car completed the maze within a time limit and without colliding with walls, 
+            as these factors impacted the final grade. The bonus challenge required the car to successfully navigate a randomly 
+            configured maze, testing the robustness of the code and sensor integration without any adjustments allowed.</p>
+
+            <h1>Results</h1>
+            
+            <video id="robotVideo" width="560" height="315" controls muted onvolumechange="this.muted = true;">
+                <source src="robotVideo.mp4" type="video/mp4">
+            </video>
+             
+            <p>The robot successfully completed the maze, as demonstrated in the video. Using its ultrasonic sensors, 
+            the robot efficiently navigated through the maze, avoiding obstacles and making precise turns without any collisions. 
+            The sensor-based guidance allowed it to reach the exit ramp, meeting the project's requirements for autonomous navigation 
+            and obstacle avoidance. The seamless execution highlights the effectiveness of the coding and sensor integration, 
+            showcasing the robot's ability to complete the task as designed.</p>
+
+            
+        </div>
+        <div class="img_gpid-box">
+            <img src="elegooCar.png" alt="">
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/m1taha/"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="index.html#about">About Me</a>
+            </li>
+            <li>
+                <a href="index.html#contact-form">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright">© 2024 Hassan Taha| All Rights Reserved</p>
+    </footer> 
+</body>
+</html>
